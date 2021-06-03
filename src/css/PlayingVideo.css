@@ -1,0 +1,17 @@
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 1400px;
+  max-height: 787.5px;
+  margin: auto;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
