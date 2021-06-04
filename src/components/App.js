@@ -5,8 +5,10 @@ import YoutubeApi from "../api/YoutubeApi";
 import VideoList from "./VideoList";
 import PlayingVideo from "./PlayingVideo";
 
+import "../css/App.css";
+
 const App = function () {
-  const [searchTerm, setSearchTerm] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("wgtf cypher");
   const [searchData, setSearchData] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -40,8 +42,10 @@ const App = function () {
         onSearchSubmit={onSearchSubmit}
         className="searchbar"
       />
-      {selectedVideo ? <PlayingVideo video={selectedVideo} /> : null}
-      <VideoList videos={searchData} onVideoSelected={onVideoSelected} />
+      <div className="body-container">
+        {selectedVideo ? <PlayingVideo video={selectedVideo} /> : null}
+        <VideoList videos={searchData} onVideoSelected={onVideoSelected} />
+      </div>
     </div>
   );
 };

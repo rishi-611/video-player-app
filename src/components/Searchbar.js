@@ -14,7 +14,7 @@ const Searchbar = function ({ placeholder, onSearchSubmit }) {
   };
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">
         <form className="d-flex" onSubmit={handleSubmit}>
           <input
